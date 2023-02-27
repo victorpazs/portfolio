@@ -1,4 +1,4 @@
-export default function Introduction() {
+export default function Home() {
   return (
     <div className="flex flex-col text-left gap-8 max-w-4xl w-full">
       <h5 className="text-2xl  text-primary">Hey, welcome to</h5>

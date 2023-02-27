@@ -19,7 +19,9 @@ export default function About() {
         </h5>
       </div>
       <div className="flex flex-col text-right gap-10">
-        <h1 className="text-xl">here are some of the tools I'm used to</h1>
+        <h1 className="text-2xl  text-primary">
+          here are some of the tools I'm used to
+        </h1>
       </div>
     </div>
   );

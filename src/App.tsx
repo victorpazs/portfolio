@@ -1,7 +1,9 @@
 import { useState } from "react";
 import About from "./About";
-import Introduction from "./Introduction";
-import TopBar from "./TopBar";
+import Home from "./Home";
+import Socials from "./Components/Socials";
+import TopBar from "./Components/TopBar";
+import FloatingObjects from "./Components/FloatingObjects";
 
 function App() {
   const sectionClass =
@@ -9,15 +11,17 @@ function App() {
 
   return (
     <div className="w-full h-full">
+      <Socials />
       <TopBar />
       <section className={sectionClass}>
-        <Introduction />
+        <Home />
       </section>
       <section className={sectionClass}>
         <About />
       </section>
       <section className={sectionClass}></section>
       <section className={sectionClass}></section>
+      <FloatingObjects />
     </div>
   );
 }
