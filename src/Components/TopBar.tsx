@@ -1,4 +1,10 @@
-export default function TopBar() {
+import FadeIn from "./FadeIn";
+
+type Props = {
+  setOpenSocials: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+export default function TopBar({ setOpenSocials }: Props) {
   const anchorClass =
     "cursor-pointer hover:text-primary hover:underline transition active:text-primary focus:text-primary";
 
@@ -14,22 +20,37 @@ export default function TopBar() {
   };
 
   return (
-    <nav
-      className={`fixed top-0 w-full px-12 py-5 transition bg-[#04041c55] backdrop-blur-md flex  justify-between`}
+    <FadeIn
+      id="top_bar"
+      className={`fixed top-0 w-full px-12 py-5 transition bg-[#04041c55] backdrop-blur-md flex items-center justify-between`}
     >
+      <img
+        onClick={() => setOpenSocials((prev) => !prev)}
+        onDragStart={(e) => e.preventDefault()}
+        className="cursor-pointer w-6 sm:hidden"
+        src="/menu.svg"
+      />
       <div>language</div>
-      <div className="flex gap-10 items-center">
-        <a onClick={() => scrollTopElement("about")} className={anchorClass}>
-          about
-        </a>
-        <a onClick={() => scrollTopElement("tools")} className={anchorClass}>
-          tools
-        </a>
-        <a onClick={() => scrollTopElement("contact")} className={anchorClass}>
-          contact
-        </a>
+      <div className="flex items-center gap-10">
+        <div className="gap-10 items-center hidden sm:flex">
+          <a
+            onClick={() => scrollTopElement("about_section")}
+            className={anchorClass}
+          >
+            about
+          </a>
+          <a onClick={() => scrollTopElement("tools")} className={anchorClass}>
+            tools
+          </a>
+          <a
+            onClick={() => scrollTopElement("contact")}
+            className={anchorClass}
+          >
+            contact
+          </a>
+        </div>
         <button className="bg-primary px-3 py-1 rounded-md">resume</button>
       </div>
-    </nav>
+    </FadeIn>
   );
 }

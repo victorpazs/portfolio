@@ -1,10 +1,31 @@
-export default function Socials() {
+import { useState } from "react";
+import FadeIn from "./FadeIn";
+
+type Props = {
+  open: boolean;
+};
+
+export default function Socials({ open }: Props) {
+  const [hover, setHover] = useState("");
+
+  const iconClass = "cursor-pointer w-5 hover:fill-primary";
+  const outterClass = "relative ";
+
   return (
-    <div className="flex flex-col left-5 inset-y-1/2  fixed border-primary">
-      <h4>linkedin</h4>
-      <h4>email</h4>
-      <h4>instagram</h4>
-      <h4>twitter</h4>
-    </div>
+    <FadeIn
+      id={"socials"}
+      className={`${
+        open ? "left-5" : "-left-14"
+      } transition-all inset-y-1/3 m-auto fixed`}
+    >
+      <div className="flex gap-5 flex-col border-primary bg-primary bg-opacity-100 sm:bg-opacity-20 rounded-full py-4 px-2 items-center">
+        <div className={outterClass}>
+          <img src={`/linkedin.svg`} className={iconClass} />
+        </div>
+        <img src={`/email.svg`} className={iconClass} />
+        <img src="/instagram.svg" className={iconClass} />
+        <img src="/twitter.svg" className={iconClass} />
+      </div>
+    </FadeIn>
   );
 }

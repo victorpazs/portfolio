@@ -1,7 +1,12 @@
+import FadeIn from "../Components/FadeIn";
+
 export default function About() {
   return (
-    <div id="about" className="flex justify-between max-w-6xl w-full">
-      <div className="flex flex-col text-left gap-10 max-w-xl">
+    <FadeIn id="about" className="flex justify-between max-w-6xl w-full">
+      <div
+        id="about_section"
+        className="flex flex-col text-left gap-10 max-w-xl"
+      >
         <h1 className="text-2xl text-primary">about me</h1>
         <h5 className="text-xl ">
           Hi there! My name is Victor and I'm an 18-year-old web developer. I
@@ -23,6 +28,6 @@ export default function About() {
           here are some of the tools I'm used to
         </h1>
       </div>
-    </div>
+    </FadeIn>
   );
 }
