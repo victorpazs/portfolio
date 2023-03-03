@@ -1,10 +1,18 @@
+import { CurrentLanguage } from "../App";
 import FadeIn from "./FadeIn";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 type Props = {
   setOpenSocials: React.Dispatch<React.SetStateAction<boolean>>;
+  currentLanguage: CurrentLanguage;
+  setCurrentLanguage: React.Dispatch<React.SetStateAction<CurrentLanguage>>;
 };
 
-export default function TopBar({ setOpenSocials }: Props) {
+export default function TopBar({
+  setOpenSocials,
+  currentLanguage,
+  setCurrentLanguage,
+}: Props) {
   const anchorClass =
     "cursor-pointer hover:text-primary hover:underline transition active:text-primary focus:text-primary";
 
@@ -22,7 +30,7 @@ export default function TopBar({ setOpenSocials }: Props) {
   return (
     <FadeIn
       id="top_bar"
-      className={`fixed top-0 w-full px-12 py-5 transition bg-[#04041c55] backdrop-blur-md flex items-center justify-between`}
+      className={`fixed top-0 w-full px-6 sm:px-12 py-5 transition bg-[#04041c55] backdrop-blur-md flex items-center justify-between`}
     >
       <img
         onClick={() => setOpenSocials((prev) => !prev)}
@@ -30,7 +38,11 @@ export default function TopBar({ setOpenSocials }: Props) {
         className="cursor-pointer w-6 sm:hidden"
         src="/menu.svg"
       />
-      <div>language</div>
+
+      <LanguageSwitcher
+        setCurrentLanguage={setCurrentLanguage}
+        currentLanguage={currentLanguage}
+      />
       <div className="flex items-center gap-10">
         <div className="gap-10 items-center hidden sm:flex">
           <a
