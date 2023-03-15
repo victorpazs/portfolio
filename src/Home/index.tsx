@@ -6,7 +6,9 @@ export default function Home() {
       id="home"
       className="flex flex-col text-left gap-8 max-w-4xl w-full"
     >
-      <h5 className="text-lg sm:text-2xl  text-primary">Hey, welcome to</h5>
+      <h5 id="welcome" className="text-lg sm:text-2xl  text-primary">
+        Hey, welcome to
+      </h5>
 
       <h1 className="text-6xl sm:text-8xl">Victor Paz da Silva's portfolio</h1>
       <h1 className="text-lg sm:text-xl max-w-2xl text-grey">

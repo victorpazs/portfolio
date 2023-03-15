@@ -24,7 +24,7 @@ export default function Socials({ open }: Props) {
         </div>
         <img src={`/email.svg`} className={iconClass} />
         <img src="/instagram.svg" className={iconClass} />
-        <img src="/twitter.svg" className={iconClass} />
+        <img src="/github.svg" className={iconClass} />
       </div>
     </FadeIn>
   );

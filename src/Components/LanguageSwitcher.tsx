@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CurrentLanguage } from "../App";
-
+import { switchTexts } from "../SwitchLanguage";
 type Props = {
   currentLanguage: CurrentLanguage;
   setCurrentLanguage: React.Dispatch<React.SetStateAction<CurrentLanguage>>;
@@ -36,6 +36,7 @@ export default function LanguageSwitcher({
       setLoad(false);
       setCurrentLanguage(newLanguage);
     }, 1000);
+    switchTexts({ newLang: newLanguage.language });
   };
   return (
     <div className={`flex gap-4 items-center`}>

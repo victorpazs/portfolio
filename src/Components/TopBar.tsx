@@ -51,8 +51,11 @@ export default function TopBar({
           >
             about
           </a>
-          <a onClick={() => scrollTopElement("tools")} className={anchorClass}>
-            tools
+          <a
+            onClick={() => scrollTopElement("projects")}
+            className={anchorClass}
+          >
+            projects
           </a>
           <a
             onClick={() => scrollTopElement("contact")}
