@@ -8,7 +8,7 @@ interface TextData {
 
 const data: TextData = jsonData;
 
-export function switchTexts({ newLang }: { newLang: string }) {
+export function switchTexts(newLang: string) {
   let fields = Object.keys(data[newLang]);
 
   for (let x = 0; x < fields.length; x++) {

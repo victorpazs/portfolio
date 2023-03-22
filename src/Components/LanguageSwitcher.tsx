@@ -35,8 +35,9 @@ export default function LanguageSwitcher({
     setTimeout(() => {
       setLoad(false);
       setCurrentLanguage(newLanguage);
-    }, 1000);
-    switchTexts({ newLang: newLanguage.language });
+    }, 300);
+    setOpen(false);
+    switchTexts(newLanguage.language);
   };
   return (
     <div className={`flex gap-4 items-center`}>

@@ -1,13 +1,27 @@
 {
     "pt_BR":{
-        "welcome": "teste"
+        "welcome": "Olá! Bem-vindo(a) ao",
+        "name": "Portifolio do Victor Paz da Silva",
+        "introduction": "Sou um desenvolvedor web brasileiro com paixão por construir aplicações web dinâmicas, responsivas e escaláveis. Eu gosto de transformar ideias em aplicações reais para ajudar as pessoas e conectar todos nós.",
+        "about_me": "Sobre mim",
+        "about_me_1": "Olá! Meu nome é Victor e eu sou um desenvolvedor web de 18 anos. Eu tenho uma paixão por construir websites e aplicações que sejam bonitos e funcionais. Seja projetando a interface do usuário, codificando o backend ou otimizando para desempenho, eu amo cada aspecto do processo de desenvolvimento.",
+        "about_me_2": "Como freelancer, busco projetos empolgantes que me desafiem e me permitam exercer minha criatividade. Comprometo-me a fornecer trabalhos de alta qualidade e atender às expectativas dos meus clientes. Se você precisa de um desenvolvedor web habilidoso e confiável, sinta-se à vontade para entrar em contato comigo!"
     },
     "en_US":{
-        "welcome": "test"
+        "welcome": "Hey! Welcome to",
+        "name": "Victor Paz da Silva's portfolio",
+        "introduction": "I am a Brazilian web developer with a passion for building dynamic, responsive, and scalable web applications. I enjoy turning ideas into real applications to help people and connect us all.",
+        "about_me": "About me",
+        "about_me_1": "Hi there! My name is Victor and I'm an 18-year-old web developer. I have a passion for building websites and applications that are both beautiful and functional. Whether it's designing the user interface, coding the backend, or optimizing for performance, I love every aspect of the development process.",
+        "about_me_2":"As a freelancer, I'm looking for exciting projects that challenge me and allow me to exercise my creativity. I'm committed to delivering high-quality work and meeting my clients' expectations. If you're in need of a skilled and reliable web developer, feel free to reach out to me!" 
 
     },
     "es":{
-        "welcome": "tieste"
-
+        "welcome": "Hola, bienvenido al",
+        "name": "portafolio de Victor Paz da Silva",
+        "introduction": "Soy un desarrollador web brasileño apasionado por construir aplicaciones web dinámicas, responsivas y escalables. Me gusta convertir ideas en aplicaciones reales para ayudar a las personas y conectarnos a todos.",
+        "about_me": "Acerca de mí",
+        "about_me_1":"¡Hola! Mi nombre es Victor y soy un desarrollador web de 18 años. Tengo pasión por construir sitios web y aplicaciones que sean tanto hermosos como funcionales. Ya sea diseñando la interfaz de usuario, programando el backend o optimizando para el rendimiento, amo cada aspecto del proceso de desarrollo.",
+        "about_me_2": "Como freelancer, busco proyectos emocionantes que me desafíen y me permitan ejercitar mi creatividad. Estoy comprometido a ofrecer trabajos de alta calidad y cumplir con las expectativas de mis clientes. Si necesitas un desarrollador web habilidoso y confiable, ¡no dudes en contactarme!"
     }
 }
