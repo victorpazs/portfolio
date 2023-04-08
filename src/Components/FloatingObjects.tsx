@@ -1,46 +1,51 @@
 import React, { useState, useEffect } from "react";
+import "./tags.css";
 
-const CodeFloating: React.FC = () => {
-  const [codes, setCodes] = useState<string[]>([]);
+interface Tag {
+  id: number;
+  text: string;
+  top: number;
+  left: number;
+}
+
+const App: React.FC = () => {
+  const [tags, setTags] = useState<Tag[]>([]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const code = generateCodeSnippet();
-      setCodes((prevCodes) => [...prevCodes, code]);
+      if (tags.length >= 30) return clearInterval(interval);
+      const newTag: Tag = {
+        id: Date.now(),
+        text: Math.random() < 0.5 ? "<>" : "</>",
+        top: Math.floor(Math.random() * window.innerHeight),
+        left: Math.floor(Math.random() * window.innerWidth),
+      };
+      setTags([...tags, newTag]);
     }, 1000);
-
     return () => clearInterval(interval);
-  }, []);
+  }, [tags]);
 
-  const generateCodeSnippet = () => {
-    const length = Math.floor(Math.random() * 50) + 1;
-    const characters =
-      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    let code = "";
-    for (let i = 0; i < length; i++) {
-      code += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
-    return code;
-  };
+  console.log("a");
 
   return (
     <div>
-      {codes.map((code, index) => (
+      {tags.map((tag) => (
         <span
-          key={index}
-          className="text-xs text-green-500"
+          key={tag.id}
+          className="tag"
           style={{
-            position: "absolute",
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
-            transform: `translate(-50%, -50%)`,
+            position: "fixed",
+            top: tag.top,
+            left: tag.left,
+            color: "#AAAAAA44",
+            transition: "all 1s ease",
           }}
         >
-          {code}
+          {tag.text}
         </span>
       ))}
     </div>
   );
 };
 
-export default CodeFloating;
+export default App;
