@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <FadeIn
       id="home"
-      className="flex flex-col text-left gap-8 max-w-4xl w-full"
+      className="flex flex-col text-left gap-8 max-w-6xl w-full"
     >
       <h5 id="welcome" className="text-lg sm:text-2xl  text-primary">
         Hey, welcome to

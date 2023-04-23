@@ -5,6 +5,7 @@ import Socials from "./Components/Socials";
 import TopBar from "./Components/TopBar";
 import { switchTexts } from "./SwitchLanguage";
 import FloatingObjects from "./Components/FloatingObjects";
+import MouseFollower from "./Components/MouseFollower";
 
 export interface CurrentLanguage {
   language: string;
@@ -27,8 +28,8 @@ export default function App() {
   }, []);
 
   return (
-    <div className="w-full h-full">
-      <FloatingObjects />
+    <div className="w-full h-full z-10">
+      <MouseFollower />
       <Socials open={openSocials} />
 
       <TopBar

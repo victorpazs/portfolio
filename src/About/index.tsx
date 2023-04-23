@@ -1,4 +1,5 @@
 import FadeIn from "../Components/FadeIn";
+import Tools from "./Tools";
 
 export default function About() {
   return (
@@ -15,6 +16,7 @@ export default function About() {
         <h1 className="text-2xl  text-primary">
           here are some of the tools I'm used to
         </h1>
+        <Tools />
       </div>
     </FadeIn>
   );
