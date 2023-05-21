@@ -8,8 +8,7 @@
   translate: -50% -50%;
   border-radius: 50%;
   animation: rotate 20s infinite;
-  filter: blur(200px);
-  z-index: -19;
+  z-index: -2;
 }
 
 @keyframes rotate {
@@ -20,4 +19,13 @@
   to {
     rotate: 360deg;
   }
+}
+
+#blur {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+
+  backdrop-filter: blur(200px);
 }

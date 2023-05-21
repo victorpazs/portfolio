@@ -28,23 +28,25 @@ export default function App() {
   }, []);
 
   return (
-    <div className="w-full h-full z-10">
-      <MouseFollower />
-      <Socials open={openSocials} />
+    <>
+      <div className="w-full h-full z-10 relative">
+        <MouseFollower />
+        <Socials open={openSocials} />
 
-      <TopBar
-        setCurrentLanguage={setCurrentLanguage}
-        currentLanguage={currentLanguage}
-        setOpenSocials={setOpenSocials}
-      />
-      <section className={sectionClass}>
-        <Home />
-      </section>
-      <section className={sectionClass}>
-        <About />
-      </section>
-      <section className={sectionClass}></section>
-      <section className={sectionClass}></section>
-    </div>
+        <TopBar
+          setCurrentLanguage={setCurrentLanguage}
+          currentLanguage={currentLanguage}
+          setOpenSocials={setOpenSocials}
+        />
+        <section className={sectionClass}>
+          <Home />
+        </section>
+        <section className={sectionClass}>
+          <About />
+        </section>
+        <section className={sectionClass}></section>
+        <section className={sectionClass}></section>
+      </div>
+    </>
   );
 }
