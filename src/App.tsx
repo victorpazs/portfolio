@@ -4,8 +4,8 @@ import Home from "./Home";
 import Socials from "./Components/Socials";
 import TopBar from "./Components/TopBar";
 import { switchTexts } from "./SwitchLanguage";
-import FloatingObjects from "./Components/FloatingObjects";
 import MouseFollower from "./Components/MouseFollower";
+import Tools from "./Tools";
 
 export interface CurrentLanguage {
   language: string;
@@ -44,7 +44,9 @@ export default function App() {
         <section className={sectionClass}>
           <About />
         </section>
-        <section className={sectionClass}></section>
+        <section className={sectionClass}>
+          <Tools />
+        </section>
         <section className={sectionClass}></section>
       </div>
     </>
