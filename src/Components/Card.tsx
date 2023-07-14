@@ -1,18 +1,58 @@
+import React, { useRef } from "react";
+
+import "./styles.css";
+
 type CardProps = {
-  title: string;
+  title?: string;
   desc?: string;
-  img: string;
+  img?: string;
 };
 
 export default function Card({ title, desc, img }: CardProps) {
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const cardMovement = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = cardRef.current;
+
+    if (card) {
+      const coordBox = card.getBoundingClientRect();
+      const centerPointX = coordBox.x + coordBox.width / 2;
+      const centerPointY = coordBox.y + coordBox.height / 2;
+      const centerPoint = `${centerPointX} || ${centerPointY}`;
+
+      const maxRotation = 20;
+
+      //Y rotation
+      const rotationFactorY = maxRotation / (coordBox.width / 2);
+      const yRotation = Math.ceil((e.clientX - centerPointX) * rotationFactorY);
+
+      //X rotation
+      const rotationFactorX = maxRotation / (coordBox.height / 2);
+      const xRotation =
+        -1 * Math.ceil((e.clientY - centerPointY) * rotationFactorX);
+      if (card)
+        card.style.cssText = `transform: scale3d(1.07, 1.07, 1.07) rotateY(${yRotation}deg) rotateX(${xRotation}deg);`;
+    }
+  };
+
+  const cardMovementStop = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = cardRef.current;
+
+    if (card) card.style.cssText = `transform: rotateY(0deg) rotateX(0deg);`;
+  };
+
   return (
-    <div className="relative transition-all hover:w-32  h-[32rem] items-end justify-start overflow-hidden rounded-xl  text-center text-gray-700">
-      <div className="absolute inset-0 m-0 h-full w-full overflow-hidden rounded-none bg-transparent bg-[url('https://images.unsplash.com/photo-1552960562-daf630e9278b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80')] bg-cover bg-clip-border bg-center text-gray-700 shadow-none">
-        <div className="to-bg-[#000]-10 absolute inset-0 h-full w-full bg-gradient-to-t from-[#000]/80 via-[#000]/50"></div>
-      </div>
-      <div className="relative text-left p-6 px-2">
-        <h2 className="text-2xl font-medium">{title}</h2>
-        <h5 className="mb-4 block s text-xl  text-gray-400">{desc}</h5>
+    <div
+      ref={cardRef}
+      className="card"
+      onMouseMove={cardMovement}
+      onMouseOut={cardMovementStop}
+    >
+      <div className="card_inner">
+        <img src={img} style={{ width: 40, height: 40 }} />
+
+        <h2>{title}</h2>
+        <span></span>
       </div>
     </div>
   );
