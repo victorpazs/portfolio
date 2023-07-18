@@ -49,10 +49,10 @@ export default function Card({ title, desc, img }: CardProps) {
       onMouseOut={cardMovementStop}
     >
       <div className="card_inner">
-        <img src={img} style={{ width: 40, height: 40 }} />
+        <img src={img} style={{ width: 40 }} />
 
-        <h2>{title}</h2>
-        <span></span>
+        <h5 className="text-primary text-xl">{title}</h5>
+        <span className="text-grey" id={desc}></span>
       </div>
     </div>
   );

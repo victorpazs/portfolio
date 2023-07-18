@@ -30,7 +30,7 @@ export default function TopBar({
   return (
     <FadeIn
       id="top_bar"
-      className={`fixed top-0 w-full px-6 sm:px-12 py-5 transition bg-[#04041c55] backdrop-blur-md flex items-center justify-between`}
+      className={`fixed z-10 top-0 w-full px-6 sm:px-12 py-5 transition bg-[#04041c55] backdrop-blur-md flex items-center justify-between`}
     >
       <img
         onClick={() => setOpenSocials((prev) => !prev)}

@@ -44,7 +44,7 @@ export default function App() {
         <section className={sectionClass}>
           <About />
         </section>
-        <section className={sectionClass}>
+        <section className={`${sectionClass}`}>
           <Tools />
         </section>
         <section className={sectionClass}></section>
