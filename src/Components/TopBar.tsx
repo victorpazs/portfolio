@@ -1,8 +1,9 @@
+import React, { useState, useEffect } from "react";
 import { CurrentLanguage } from "../App";
 import FadeIn from "./FadeIn";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-type Props = {
+type TopBarProps = {
   setOpenSocials: React.Dispatch<React.SetStateAction<boolean>>;
   currentLanguage: CurrentLanguage;
   setCurrentLanguage: React.Dispatch<React.SetStateAction<CurrentLanguage>>;
@@ -12,7 +13,10 @@ export default function TopBar({
   setOpenSocials,
   currentLanguage,
   setCurrentLanguage,
-}: Props) {
+}: TopBarProps) {
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   const anchorClass =
     "cursor-pointer hover:text-primary hover:underline transition active:text-primary focus:text-primary";
 
@@ -27,10 +31,38 @@ export default function TopBar({
     }
   };
 
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY > lastScrollY) {
+        // if scroll down hide the navbar
+        setShow(false);
+      } else {
+        // if scroll up show the navbar
+        setShow(true);
+      }
+
+      // remember current page location to use in the next move
+      setLastScrollY(window.scrollY);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+
+      // cleanup function
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
+
   return (
     <FadeIn
       id="top_bar"
-      className={`fixed z-10 top-0 w-full px-6 sm:px-12 py-5 transition bg-[#04041c55] backdrop-blur-md flex items-center justify-between`}
+      className={`fixed z-10 ${
+        show ? "top-0" : "top-[-100px]"
+      } w-full px-6 sm:px-12 py-5 transition bg-[#04041c55] backdrop-blur-md flex items-center justify-between`}
     >
       <img
         onClick={() => setOpenSocials((prev) => !prev)}
