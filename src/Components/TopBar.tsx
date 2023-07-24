@@ -62,7 +62,7 @@ export default function TopBar({
       id="top_bar"
       className={`fixed z-10 ${
         show ? "top-0" : "top-[-100px]"
-      } w-full px-6 sm:px-12 py-5 transition bg-[#04041c55] backdrop-blur-md flex items-center justify-between`}
+      } transition-all w-full px-6 sm:px-12 py-5  bg-[#04041c55] backdrop-blur-md flex items-center justify-between`}
     >
       <img
         onClick={() => setOpenSocials((prev) => !prev)}
@@ -75,20 +75,22 @@ export default function TopBar({
         setCurrentLanguage={setCurrentLanguage}
         currentLanguage={currentLanguage}
       />
-      <div className="flex items-center gap-10">
-        <div className="gap-10 items-center hidden sm:flex">
+      <div className="flex items-center gap-5">
+        <div className="gap-5 items-center hidden sm:flex">
           <a
             onClick={() => scrollTopElement("about_section")}
             className={anchorClass}
           >
             about
           </a>
+
           <a
             onClick={() => scrollTopElement("projects")}
             className={anchorClass}
           >
             projects
           </a>
+
           <a
             onClick={() => scrollTopElement("contact")}
             className={anchorClass}
