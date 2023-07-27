@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { CurrentLanguage } from "../App";
 import FadeIn from "./FadeIn";
 import LanguageSwitcher from "./LanguageSwitcher";
-
+import { DownloadCloud } from "lucide-react";
 type TopBarProps = {
   setOpenSocials: React.Dispatch<React.SetStateAction<boolean>>;
   currentLanguage: CurrentLanguage;
@@ -25,7 +25,7 @@ export default function TopBar({
     if (target) {
       target.scrollIntoView({
         behavior: "smooth",
-        block: "center",
+        block: "start",
         inline: "nearest",
       });
     }
@@ -80,25 +80,27 @@ export default function TopBar({
           <a
             onClick={() => scrollTopElement("about_section")}
             className={anchorClass}
-          >
-            about
-          </a>
+            id="topbar_about"
+          ></a>
 
+          <a
+            onClick={() => scrollTopElement("tools")}
+            className={anchorClass}
+            id="topbar_tools"
+          ></a>
           <a
             onClick={() => scrollTopElement("projects")}
             className={anchorClass}
-          >
-            projects
-          </a>
-
-          <a
-            onClick={() => scrollTopElement("contact")}
-            className={anchorClass}
-          >
-            contact
-          </a>
+            id="topbar_projects"
+          ></a>
         </div>
-        <button className="bg-primary px-3 py-1 rounded-md">resume</button>
+        <a
+          download={"computer"}
+          href="./cv.pdf"
+          className="bg-primary flex gap-2 items-center px-3 py-1 rounded-md"
+        >
+          <DownloadCloud size={"15px"} /> cv.pdf
+        </a>
       </div>
     </FadeIn>
   );

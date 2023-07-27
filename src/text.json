@@ -1,5 +1,8 @@
 {
   "pt_BR": {
+    "topbar_about": "sobre mim",
+    "topbar_tools": "ferramentas",
+    "topbar_projects": "projetos",
     "welcome": "Olá! Bem-vindo(a) ao",
     "name": "Portifolio do Victor Paz da Silva",
     "introduction": "Sou um desenvolvedor web brasileiro com paixão por construir aplicações web dinâmicas, responsivas e escaláveis. Eu gosto de transformar ideias em aplicações reais para ajudar as pessoas e conectar todos nós.",
@@ -7,14 +10,17 @@
     "about_me_1": "Olá! Meu nome é Victor e eu sou um desenvolvedor web de 18 anos. Eu tenho uma paixão por construir websites e aplicações que sejam bonitos e funcionais. Seja projetando a interface do usuário, codificando o backend ou otimizando para desempenho, eu amo cada aspecto do processo de desenvolvimento.",
     "about_me_2": "Como freelancer, busco projetos empolgantes que me desafiem e me permitam exercer minha criatividade. Comprometo-me a fornecer trabalhos de alta qualidade e atender às expectativas dos meus clientes. Se você precisa de um desenvolvedor web habilidoso e confiável, sinta-se à vontade para entrar em contato comigo!",
     "tools": "Algumas ferramentas que utilizo",
-    "react": "React é uma biblioteca JavaScript para construir interfaces de usuário. É mantido pelo Facebook e uma comunidade de desenvolvedores e empresas individuais.",
-    "node": "Node.js é um ambiente de tempo de execução JavaScript de back-end de código aberto, multiplataforma que roda no motor V8 e executa código JavaScript fora do navegador da web.",
-    "tailwind": "Tailwind CSS é um framework CSS utilitário para construir rapidamente interfaces de usuário personalizadas. É projetado para ser altamente personalizável e fácil de usar.",
-    "mui": "Material-UI é um popular framework UI React que fornece componentes pré-construídos e temas baseados nas diretrizes do Material Design do Google.",
+    "react": "Biblioteca JavaScript para construir interfaces de usuário. É mantido pelo Facebook e uma comunidade de desenvolvedores e empresas individuais.",
+    "node": "Ambiente de tempo de execução JavaScript de back-end de código aberto, multiplataforma que roda no motor V8 e executa código JavaScript fora do navegador da web.",
+    "tailwind": "Framework CSS utilitário para construir rapidamente interfaces de usuário personalizadas. É projetado para ser altamente personalizável e fácil de usar.",
+    "mui": "Popular framework UI React que fornece componentes pré-construídos e temas baseados nas diretrizes do Material Design do Google.",
     "postgres": "PostgreSQL é um poderoso sistema gerenciador de banco de dados relacional de código aberto que usa e estende a linguagem SQL.",
     "typescript": "TypeScript é uma linguagem de programação de código aberto desenvolvida e mantida pela Microsoft. É um superset sintático estrito do JavaScript e adiciona tipagem estática opcional à linguagem."
   },
   "en_US": {
+    "topbar_about": "about me",
+    "topbar_tools": "tools",
+    "topbar_projects": "projects",
     "welcome": "Hey! Welcome to",
     "name": "Victor Paz da Silva's portfolio",
     "introduction": "I am a Brazilian web developer with a passion for building dynamic, responsive, and scalable web applications. I enjoy turning ideas into real applications to help people and connect us all.",
@@ -22,14 +28,17 @@
     "about_me_1": "Hi there! My name is Victor and I'm an 18-year-old web developer. I have a passion for building websites and applications that are both beautiful and functional. Whether it's designing the user interface, coding the backend, or optimizing for performance, I love every aspect of the development process.",
     "about_me_2": "As a freelancer, I'm looking for exciting projects that challenge me and allow me to exercise my creativity. I'm committed to delivering high-quality work and meeting my clients' expectations. If you're in need of a skilled and reliable web developer, feel free to reach out to me!",
     "tools": "Some tools I'm used to",
-    "react": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.",
-    "node": "Node.js is an open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
-    "tailwind": "Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces. It is designed to be highly customizable and easy to use.",
-    "mui": "Material-UI is a popular React UI framework that provides pre-built components and themes based on Google's Material Design guidelines.",
-    "postgres": "PostgreSQL is a powerful, open-source relational database management system that uses and extends the SQL language.",
-    "typescript": "TypeScript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language."
+    "react": "JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies.",
+    "node": "Open-source, cross-platform, back-end JavaScript runtime environment that runs on the V8 engine and executes JavaScript code outside a web browser.",
+    "tailwind": "Utility-first CSS framework for rapidly building custom user interfaces. It is designed to be highly customizable and easy to use.",
+    "mui": "Popular React UI framework that provides pre-built components and themes based on Google's Material Design guidelines.",
+    "postgres": "Powerful, open-source relational database management system that uses and extends the SQL language.",
+    "typescript": "Open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript and adds optional static typing to the language."
   },
   "es": {
+    "topbar_about": "sobre mi",
+    "topbar_tools": "herramientas",
+    "topbar_projects": "proyectos",
     "welcome": "Hola, bienvenido al",
     "name": "portafolio de Victor Paz da Silva",
     "introduction": "Soy un desarrollador web brasileño apasionado por construir aplicaciones web dinámicas, responsivas y escalables. Me gusta convertir ideas en aplicaciones reales para ayudar a las personas y conectarnos a todos.",
@@ -37,11 +46,11 @@
     "about_me_1": "¡Hola! Mi nombre es Victor y soy un desarrollador web de 18 años. Tengo pasión por construir sitios web y aplicaciones que sean tanto hermosos como funcionales. Ya sea diseñando la interfaz de usuario, programando el backend o optimizando para el rendimiento, amo cada aspecto del proceso de desarrollo.",
     "about_me_2": "Como freelancer, busco proyectos emocionantes que me desafíen y me permitan ejercitar mi creatividad. Estoy comprometido a ofrecer trabajos de alta calidad y cumplir con las expectativas de mis clientes. Si necesitas un desarrollador web habilidoso y confiable, ¡no dudes en contactarme!",
     "tools": "Algunas herramientas que uso",
-    "react": "React es una biblioteca de JavaScript para construir interfaces de usuario. Es mantenido por Facebook y una comunidad de desarrolladores y empresas individuales.",
-    "node": "Node.js es un entorno de tiempo de ejecución JavaScript de back-end de código abierto, multiplataforma que se ejecuta en el motor V8 y ejecuta código JavaScript fuera del navegador web.",
-    "tailwind": "Tailwind CSS es un framework CSS utilitario para construir rápidamente interfaces de usuario personalizadas. Está diseñado para ser altamente personalizable y fácil de usar.",
-    "mui": "Material-UI es un popular framework UI React que proporciona componentes y temas preconstruidos basados en las directrices del Material Design de Google.",
-    "postgres": "PostgreSQL es un potente sistema gestor de bases de datos relacionales de código abierto que utiliza y extiende el lenguaje SQL.",
-    "typescript": "TypeScript es un lenguaje de programación de código abierto desarrollado y mantenido por Microsoft. Es un superset sintáctico estricto de JavaScript y agrega tipado estático opcional al lenguaje."
+    "react": "Biblioteca de JavaScript para construir interfaces de usuario. Es mantenido por Facebook y una comunidad de desarrolladores y empresas individuales.",
+    "node": "Entorno de tiempo de ejecución JavaScript de back-end de código abierto, multiplataforma que se ejecuta en el motor V8 y ejecuta código JavaScript fuera del navegador web.",
+    "tailwind": "Framework CSS utilitario para construir rápidamente interfaces de usuario personalizadas. Está diseñado para ser altamente personalizable y fácil de usar.",
+    "mui": "Popular framework UI React que proporciona componentes y temas preconstruidos basados en las directrices del Material Design de Google.",
+    "postgres": "Potente sistema gestor de bases de datos relacionales de código abierto que utiliza y extiende el lenguaje SQL.",
+    "typescript": "Lenguaje de programación de código abierto desarrollado y mantenido por Microsoft. Es un superset sintáctico estricto de JavaScript y agrega tipado estático opcional al lenguaje."
   }
 }
